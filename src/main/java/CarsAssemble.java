@@ -15,6 +15,7 @@ public class CarsAssemble {
             rate = speed * 221.0 * 0.77;
         }
         return rate;
+
     }
 
     public int workingItemsPerMinute(int speed) {
@@ -23,7 +24,7 @@ public class CarsAssemble {
         if (speed == 0) {
             items = 0;
         } else if (speed >= 1 && speed <= 4) {
-            items = (int) (speed * 221) / 60;
+            items = (speed * 221) / 60;
         } else if (speed >= 5 && speed <= 8) {
             items = (int) ((speed * 221 * 0.9) / 60);
         } else if (speed == 9) {
