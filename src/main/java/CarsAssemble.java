@@ -20,20 +20,7 @@ public class CarsAssemble {
 
     public int workingItemsPerMinute(int speed) {
         //throw new UnsupportedOperationException("Please implement the CarsAssemble.workingItemsPerMinute() method");
-        int items = 0;
-        if (speed == 0) {
-            items = 0;
-        } else if (speed >= 1 && speed <= 4) {
-            items = (speed * 221) / 60;
-        } else if (speed >= 5 && speed <= 8) {
-            items = (int) ((speed * 221 * 0.9) / 60);
-        } else if (speed == 9) {
-            items = (int) ((speed * 221 * 0.8) / 60);
-        } else if (speed == 10) {
-            items = (int) ((speed * 221 * 0.77) / 60);
-        }
-        return items;
-
+        return (int) productionRatePerHour(speed) / 60;
     }
 
 }
